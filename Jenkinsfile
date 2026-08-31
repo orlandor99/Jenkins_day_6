@@ -7,7 +7,8 @@ pipeline{
     stages{
         stage("Checkout & Inspect"){
             steps{
-                git branch: "${BRANCH}", url: "${GIT_REPO}"
+            //    git branch: "${BRANCH}", url: "${GIT_REPO}"
+                git "${GIT_REPO}"
                 sh '''
                     git branch
                     ls -l
